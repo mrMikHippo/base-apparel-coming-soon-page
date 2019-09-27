@@ -11,10 +11,14 @@ html {
 body{
   height: 100%;
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  /* color: #AA7560; */
+  color: hsl(0, 36%, 70%);
 }
 
 .main-container {
-  background-color: orange;
+  /* background-color: orange; */
   height: 100%;
   float: left;
   width: 60%;
@@ -24,5 +28,31 @@ body{
 
 .image-container {
   height: 100%;
+  width: 40%;
+  float: right;
   background-color: purple;
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 0;
+}
+
+/* Title */
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-top: 20%;
+  margin-bottom: 0;
+}
+
+.title-highlighted {
+  color: black;
+}
+
+/* Text */
+.text {
+  line-height: 2;
+  margin-right: 15%;
 }
