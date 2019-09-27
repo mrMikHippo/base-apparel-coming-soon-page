@@ -1,10 +1,15 @@
 html {
   height: 100%;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; *behavior: url(scripts/boxsizing.htc);
+    /* *behavior - for IE6 and IE7 */
 }
 
 *, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
