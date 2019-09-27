@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+}
+
+.main-container {
+  background-color: orange;
+  height: 100%;
+  float: left;
+  width: 60%;
+  padding: 5% 10% 5%;
+
+}
+
+.image-container {
+  height: 100%;
+  background-color: purple;
+}
