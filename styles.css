@@ -32,12 +32,14 @@ input:focus {
   outline-width: 0; /* Remove highlighting when selected */
 }
 
+
+
 .main-container {
   height: 100%;
   float: left;
   width: 60%;
   padding: 5% 10% 5%;
-  background-image: url("images/bg-pattern-desktop.svg");
+  background: url("images/bg-pattern-desktop.svg") no-repeat;
   background-size: cover;
 }
 
@@ -49,6 +51,13 @@ input:focus {
 }
 
 /* Logo */
+.logo-container {
+    display: none;
+}
+.mini-logo {
+  margin: 5%;
+}
+
 .logo {
   margin-bottom: 0;
 }
@@ -122,4 +131,47 @@ input:focus {
 
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: hsl(0, 36%, 70%);
+}
+
+@media (max-width: 375px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-container {
+    display: block;
+    text-align: left;
+  }
+  .main-container {
+    width: 100%;
+    order: 1;
+  }
+  .image-container {
+    background: no-repeat center url("images/hero-mobile.jpg");
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-top: 15%;
+  }
+
+  .text {
+    margin-right: 0;
+  }
+
+  .email-form {
+    margin: 2% 0;
+  }
+
+  .email-submit {
+    margin-left: -20%;
+  }
+
 }
