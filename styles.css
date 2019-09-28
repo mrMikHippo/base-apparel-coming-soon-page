@@ -33,12 +33,12 @@ input:focus {
 }
 
 .main-container {
-  /* background-color: orange; */
   height: 100%;
   float: left;
   width: 60%;
   padding: 5% 10% 5%;
-
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-size: cover;
 }
 
 .image-container {
