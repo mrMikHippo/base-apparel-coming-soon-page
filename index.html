@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -10,6 +11,7 @@
 
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 </head>
+
 <body>
   <div class="logo-container">
     <img class="mini-logo" src="images/logo.svg" alt="">
@@ -23,11 +25,12 @@
     <h1 class="title">WE'RE<br /><span class="title-highlighted">COMING<br /> SOON</span></h1>
 
     <p class="text">Hello fellow shoppers! We're currently building our new fashion store.
-    Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
     <form class="email-form" action="" method="">
-      <input class="email-type" type="text" name="" value="" placeholder="Email Address">
+      <input id="mail" class="email-type" type="text" name="mail" placeholder="Email Address">
       <input class="email-submit" type="submit" name="" value=">">
+      <span id="error-message" class="error" aria-live="polite"></span>
     </form>
 
   </div>
@@ -35,5 +38,7 @@
   <div class="image-container">
 
   </div>
+  <script src="scripts/index.js" charset="utf-8"></script>
 </body>
+
 </html>

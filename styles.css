@@ -97,6 +97,14 @@ input:focus {
   filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
+.email-invalid {
+  border-color: hsl(0, 100%, 60%);
+  border-width: 2px;
+  padding: 11px 20px;
+  color: black;
+  opacity: 1;
+}
+
 .email-type:focus {
   opacity: 1;
   filter: alpha(opacity=100); /* For IE8 and earlier */
@@ -131,6 +139,16 @@ input:focus {
 
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: hsl(0, 36%, 70%);
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 2% 5%;
+  color: hsl(0, 100%, 60%);
+  /* -moz-box-sizing: border-box;
+  box-sizing: border-box; */
+  display: block;
 }
 
 @media (max-width: 375px) {
