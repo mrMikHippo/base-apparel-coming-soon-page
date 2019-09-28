@@ -45,7 +45,7 @@ input:focus {
   height: 100%;
   width: 40%;
   float: right;
-  background-color: purple;
+  background: url("images/hero-desktop.jpg");
 }
 
 /* Logo */
