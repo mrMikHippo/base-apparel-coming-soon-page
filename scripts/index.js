@@ -14,7 +14,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     error.innerHTML = "Please provide a valid email";
     e.preventDefault();
   } else {
-    email.className = "valid";
+    email.className = "email-type";
     error.innerHTML = "";
   }
   e.preventDefault();
