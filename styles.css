@@ -29,7 +29,7 @@ input {
 }
 
 input:focus {
-  outline-width: 0; /* Remove highlighting when selected */
+  outline-style: none;/* Remove highlighting when selected */
 }
 
 
