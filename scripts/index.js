@@ -1,7 +1,7 @@
 
 var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-var email = document.querySelector("#mail");
+var email = document.querySelector("#email");
 var error = document.querySelector("#error-message");
 var icon = document.querySelector(".icon");
 
