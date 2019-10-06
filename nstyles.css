@@ -37,28 +37,34 @@ input:focus, button:focus {
 }
 
 .logo-container {
-  height: 15vh;
-  padding: 5% 10%;
+  height: 10vh;
+  padding: 5% 5%;
 }
 
 .main-container {
   order: 2;
   padding: 0 10% 0;
-  background: url("images/bg-pattern-desktop.svg") no-repeat;
+  background: no-repeat url("images/bg-pattern-desktop.svg") ;
   background-size: cover;
+  /* background-size: 100% 100%; */
+  text-align: center;
+  height: 60vh;
 }
 
 .image-container {
   order: 1;
-  background: url("images/hero-desktop.jpg");
+  background: no-repeat url("images/hero-mobile.jpg");
+  background-size: cover;
+  min-height: 30vh;
 }
 
 /* Title */
 .title {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  font-size: 5rem;
-  margin-bottom: 0;
+  font-size: 3rem;
+  margin-top: 15%;
+  margin-bottom: 10%;
 }
 
 .title-highlighted {
@@ -67,13 +73,13 @@ input:focus, button:focus {
 
 /* Text */
 .text {
+  margin-top: 5%;
   line-height: 2;
-  margin-right: 15%;
 }
 
 /* Email sender */
 .email-form {
-  margin: 5% 15% 0 0;
+  margin: 10% 0 2%;
   position: relative;
 }
 
@@ -103,13 +109,14 @@ input:focus, button:focus {
 
 .email-submit {
   width: 20%;
+  min-width: 60px;
   padding: 5px 20px;
   font-weight: 100;
   font-size: 1.8rem;
   color: white;
   float: right;
   position: absolute;
-  margin-left: -15%;
+  margin-left: -20%;
   border: none;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow: 0 10px 30px hsl(0, 80%, 86%);
@@ -135,7 +142,7 @@ input:focus, button:focus {
 /* This is the style of our error messages */
 .icon {
   position: absolute;
-  right: 18%;
+  right: 22%;
   text-align: center;
   color: hsl(0, 100%, 60%);
   font-size: 1.5rem;

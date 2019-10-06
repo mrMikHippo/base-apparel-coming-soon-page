@@ -2,15 +2,53 @@
   .logo-container {
     width: 60%;
     height: 20vh;
+    padding: 5% 10%;
+    background: no-repeat url("images/bg-pattern-desktop.svg");
   }
   .main-container {
     width: 60%;
     height: 80vh;
+    text-align: left;
+    padding-top: 5%;
+    background-position: 0 -20vh;
   }
   .image-container {
     width: 40%;
     position: absolute;
     right: 0;
     height: 100vh;
+    background-image: url("images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .title {
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .text {
+    margin-right: 15%;
+  }
+  .email-form {
+    margin: 5% 15% 0 0;
+  }
+  .email-submit {
+    margin-left: -15%;
+  }
+
+  .icon {
+    right: 18%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 5em;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .logo-container {
+    background-size: cover;
   }
 }
