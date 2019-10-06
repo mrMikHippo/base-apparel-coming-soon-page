@@ -1,0 +1,16 @@
+@media screen and (min-width: 850px) {
+  .logo-container {
+    width: 60%;
+    height: 20vh;
+  }
+  .main-container {
+    width: 60%;
+    height: 80vh;
+  }
+  .image-container {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+  }
+}

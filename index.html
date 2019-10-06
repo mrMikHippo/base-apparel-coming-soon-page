@@ -9,21 +9,18 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600&display=swap" rel="stylesheet">
   <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nstyles.css">
+  <link rel="stylesheet" href="responsive.css">
 
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 </head>
 
 <body>
-  <div class="logo-container">
-    <img class="mini-logo" src="images/logo.svg" alt="">
-  </div>
-
-
-  <div class="main-container">
-
+  <header class="box logo-container">
     <img class="logo" src="images/logo.svg" alt="">
+  </header>
 
+  <main class="box main-container">
     <h1 class="title">WE'RE<br /><span class="title-highlighted">COMING<br /> SOON</span></h1>
 
     <p class="text">Hello fellow shoppers! We're currently building our new fashion store.
@@ -36,13 +33,11 @@
       <button class="email-submit" type="submit">></button>
       <span id="error-message" class="error" aria-live="polite"></span>
     </form>
+  </main>
 
-  </div>
-
-  <div class="image-container">
-
-  </div>
+  <section class="box image-container">
+    <h2>IMAGE</h2>
+  </section>
   <script src="scripts/index.js"></script>
 </body>
-
 </html>
