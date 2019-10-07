@@ -1,6 +1,4 @@
 html {
-  height: 100%;
-  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; *behavior: url(scripts/boxsizing.htc);
@@ -13,8 +11,10 @@ html {
   box-sizing: inherit;
 }
 
-body{
-  height: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
@@ -32,41 +32,39 @@ input:focus, button:focus {
   outline-style: none;/* Remove highlighting when selected */
 }
 
+.box {
+  width: 100%;
+}
+
+.logo-container {
+  height: 10vh;
+  padding: 5% 5%;
+}
+
 .main-container {
-  height: 100%;
-  float: left;
-  width: 60%;
-  padding: 5% 10% 5%;
-  background: url("images/bg-pattern-desktop.svg") no-repeat;
+  order: 2;
+  padding: 0 10% 0;
+  background: no-repeat url("images/bg-pattern-desktop.svg") ;
   background-size: cover;
+  /* background-size: 100% 100%; */
+  text-align: center;
+  height: 60vh;
 }
 
 .image-container {
-  height: 100%;
-  width: 40%;
-  float: right;
-  background: url("images/hero-desktop.jpg");
-}
-
-/* Logo */
-.logo-container {
-    display: none;
-}
-.mini-logo {
-  margin: 5%;
-}
-
-.logo {
-  margin-bottom: 0;
+  order: 1;
+  background: no-repeat url("images/hero-mobile.jpg");
+  background-size: cover;
+  min-height: 30vh;
 }
 
 /* Title */
 .title {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  font-size: 5rem;
-  margin-top: 20%;
-  margin-bottom: 0;
+  font-size: 3rem;
+  margin-top: 15%;
+  margin-bottom: 10%;
 }
 
 .title-highlighted {
@@ -75,13 +73,13 @@ input:focus, button:focus {
 
 /* Text */
 .text {
+  margin-top: 5%;
   line-height: 2;
-  margin-right: 15%;
 }
 
 /* Email sender */
 .email-form {
-  margin: 5% 15% 0 0;
+  margin: 10% 0 2%;
   position: relative;
 }
 
@@ -111,13 +109,14 @@ input:focus, button:focus {
 
 .email-submit {
   width: 20%;
+  min-width: 60px;
   padding: 5px 20px;
   font-weight: 100;
   font-size: 1.8rem;
   color: white;
   float: right;
   position: absolute;
-  margin-left: -15%;
+  margin-left: -20%;
   border: none;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow: 0 10px 30px hsl(0, 80%, 86%);
@@ -143,7 +142,7 @@ input:focus, button:focus {
 /* This is the style of our error messages */
 .icon {
   position: absolute;
-  right: 18%;
+  right: 22%;
   text-align: center;
   color: hsl(0, 100%, 60%);
   font-size: 1.5rem;
@@ -162,47 +161,4 @@ input:focus, button:focus {
   /* -moz-box-sizing: border-box;
   box-sizing: border-box; */
   display: block;
-}
-
-@media (max-width: 375px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  .logo {
-    display: none;
-  }
-  .logo-container {
-    display: block;
-    text-align: left;
-  }
-  .main-container {
-    width: 100%;
-    order: 1;
-  }
-  .image-container {
-    background: no-repeat center url("images/hero-mobile.jpg");
-    background-size: cover;
-    width: 100%;
-    margin: 0;
-  }
-
-  .title {
-    font-size: 3rem;
-    margin-top: 15%;
-  }
-
-  .text {
-    margin-right: 0;
-  }
-
-  .email-form {
-    margin: 2% 0;
-  }
-
-  .email-submit {
-    margin-left: -20%;
-  }
-
 }
