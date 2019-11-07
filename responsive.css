@@ -1,4 +1,4 @@
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   .wrapper {
       height: 100vh;
       grid-template-columns: 8fr 6fr;
@@ -6,7 +6,7 @@
         "logo hero"
         "content hero"
         "content hero";
-      background: url("images/bg-pattern-desktop.svg");
+      background: no-repeat url("images/bg-pattern-desktop.svg");
   }
 
   .logo-container {
@@ -18,7 +18,7 @@
     padding: 0;
     display: grid;
     grid-template-columns: 20% 2fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 
   .main-container > * {
@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) and (min-height: 500px){
   .main-container h1 {
     font-size: 3.5rem;
     font-weight: 400;
@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (min-height: 500px) {
   .main-container h1 {
     font-size: 4rem;
     font-weight: 600;
