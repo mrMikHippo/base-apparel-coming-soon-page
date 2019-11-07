@@ -12,9 +12,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
@@ -32,37 +29,40 @@ input:focus, button:focus {
   outline-style: none;/* Remove highlighting when selected */
 }
 
-.box {
-  width: 100%;
+/* .wrapper */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 4fr;
+  grid-template-areas:
+    "logo"
+    "hero"
+    "content";
 }
 
 .logo-container {
-  height: 10vh;
-  padding: 5% 5%;
+  grid-area: logo;
+  padding: 7% 7%;
 }
 
 .main-container {
-  order: 2;
+  grid-area: content;
   padding: 0 10% 0;
-  background: no-repeat url("images/bg-pattern-desktop.svg") ;
-  background-size: cover;
-  /* background-size: 100% 100%; */
   text-align: center;
-  height: 60vh;
 }
 
 .image-container {
-  order: 1;
+  grid-area: hero;
   background: no-repeat url("images/hero-mobile.jpg");
   background-size: cover;
-  min-height: 30vh;
 }
 
 /* Title */
-.title {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
+.main-container h1 {
   font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: .5rem;
+
   margin-top: 15%;
   margin-bottom: 10%;
 }
@@ -93,6 +93,13 @@ input:focus, button:focus {
   filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
+.email-type:focus {
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  color: black;
+}
+
+
 .email-invalid {
   border-color: hsl(0, 100%, 60%);
   border-width: 2px;
@@ -101,14 +108,8 @@ input:focus, button:focus {
   opacity: 1;
 }
 
-.email-type:focus {
-  opacity: 1;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
-  color: black;
-}
-
 .email-submit {
-  width: 20%;
+  width: 3em;
   min-width: 60px;
   padding: 5px 20px;
   font-weight: 100;
@@ -116,11 +117,12 @@ input:focus, button:focus {
   color: white;
   float: right;
   position: absolute;
-  margin-left: -20%;
+  margin-left: -3em;
   border: none;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow: 0 10px 30px hsl(0, 80%, 86%);
 }
+
 
 .email-submit:hover {
   background: linear-gradient(135deg, hsl(0, 86%, 92%), hsl(0, 82%, 88%));
@@ -142,7 +144,7 @@ input:focus, button:focus {
 /* This is the style of our error messages */
 .icon {
   position: absolute;
-  right: 22%;
+  right: 4em;
   text-align: center;
   color: hsl(0, 100%, 60%);
   font-size: 1.5rem;
@@ -158,7 +160,5 @@ input:focus, button:focus {
   width  : 100%;
   padding: 2% 5%;
   color: hsl(0, 100%, 60%);
-  /* -moz-box-sizing: border-box;
-  box-sizing: border-box; */
   display: block;
 }

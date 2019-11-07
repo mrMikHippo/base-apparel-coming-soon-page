@@ -1,54 +1,63 @@
 @media screen and (min-width: 576px) {
+  .wrapper {
+      height: 100vh;
+      grid-template-columns: 8fr 6fr;
+      grid-template-areas:
+        "logo hero"
+        "content hero"
+        "content hero";
+      background: url("images/bg-pattern-desktop.svg");
+  }
+
   .logo-container {
-    width: 60%;
-    height: 20vh;
-    padding: 5% 10%;
-    background: no-repeat url("images/bg-pattern-desktop.svg");
+    padding-left: 20%;
   }
+
   .main-container {
-    width: 60%;
-    height: 80vh;
     text-align: left;
-    padding-top: 5%;
-    background-position: 0 -20vh;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 20% 2fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
   }
+
+  .main-container > * {
+    grid-column: 2 / span 1;
+  }
+
+  .main-container h1 {
+    grid-row: 2 / span 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .text {
+    grid-row: 3 / span 1;
+  }
+
+  .email-form {
+    grid-row: 4 / span 1;
+  }
+
   .image-container {
-    width: 40%;
-    position: absolute;
-    right: 0;
-    height: 100vh;
     background-image: url("images/hero-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .title {
+}
+
+@media screen and (min-width: 750px) {
+  .main-container h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main-container h1 {
     font-size: 4rem;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .text {
-    margin-right: 15%;
-  }
-  .email-form {
-    margin: 5% 15% 0 0;
-  }
-  .email-submit {
-    margin-left: -15%;
-  }
-
-  .icon {
-    right: 18%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .title {
-    font-size: 5em;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .logo-container {
-    background-size: cover;
+    font-weight: 600;
+    letter-spacing: 1rem;
   }
 }
